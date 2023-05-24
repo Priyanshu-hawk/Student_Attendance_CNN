@@ -66,8 +66,8 @@ while True:
     img = cv2.resize(img,(0,0), None, 0.50, 0.50)
     # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    face_current = face_recognition.face_locations(img, model='cnn') # for gpu based machines
-    # face_current = face_recognition.face_locations(img, model='hog') # for cpu based machines
+    # face_current = face_recognition.face_locations(img, model='cnn') # for gpu based machines
+    face_current = face_recognition.face_locations(img, model='hog') # for cpu based machines
     encd_current = face_recognition.face_encodings(img, face_current)
 
 
@@ -95,3 +95,8 @@ while True:
     cv2.imshow('Student', img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+## Upload attendence to central DB
+def upload_attencence(attendence_file):
+    # Functuion to be implement
+    pass
