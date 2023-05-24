@@ -59,6 +59,7 @@ def mark_attend(name):
 
 
 cap = cv2.VideoCapture(0)
+print("[+] Camera Started for face detection")
 
 while True:
     suc, img = cap.read()
